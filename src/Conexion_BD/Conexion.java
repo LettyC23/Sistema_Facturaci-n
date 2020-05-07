@@ -5,7 +5,7 @@
  */
 package Conexion_BD;
 
-import Modelo.Clientes;
+import proyecto_sistema_facturación.Clientes;
 //import Modelo.Factura;
 import java.sql.Connection;
 import java.sql.DriverManager;
