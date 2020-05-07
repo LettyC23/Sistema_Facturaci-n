@@ -1,13 +1,5 @@
 
 package proyecto_sistema_facturación;
-import Modelo.Productos;
-import Modelo.Clientes;
-import Modelo.Usuarios;
-import Modelo.Nueva_Factura;
-import Modelo.Administrar_Facturas;
-import Modelo.Reporte_Facturas;
-import Modelo.Grafica;
-import Modelo.Confiuracion;
 import java.awt.CardLayout;
 
 /**
@@ -40,7 +32,7 @@ public class Sistema extends javax.swing.JFrame {
         jPanelMenu = new javax.swing.JPanel();
         Clientes = new javax.swing.JLabel();
         Productos = new javax.swing.JLabel();
-        Usuarios = new javax.swing.JLabel();
+        Proveedores = new javax.swing.JLabel();
         NuevaFactura = new javax.swing.JLabel();
         AdministrarFacturas = new javax.swing.JLabel();
         Reportes = new javax.swing.JLabel();
@@ -48,6 +40,8 @@ public class Sistema extends javax.swing.JFrame {
         Configuración = new javax.swing.JLabel();
         Salir = new javax.swing.JLabel();
         btnMenu = new javax.swing.JButton();
+        Usuarios1 = new javax.swing.JLabel();
+        Inicio = new javax.swing.JLabel();
         jPanelVistas = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -83,13 +77,13 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
 
-        Usuarios.setForeground(new java.awt.Color(51, 51, 51));
-        Usuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Usuario.png"))); // NOI18N
-        Usuarios.setText("    Usuarios");
-        Usuarios.setEnabled(false);
-        Usuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+        Proveedores.setForeground(new java.awt.Color(51, 51, 51));
+        Proveedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Usuario.png"))); // NOI18N
+        Proveedores.setText("    Proveedores");
+        Proveedores.setEnabled(false);
+        Proveedores.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                UsuariosMouseClicked(evt);
+                ProveedoresMouseClicked(evt);
             }
         });
 
@@ -168,36 +162,62 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
 
+        Usuarios1.setForeground(new java.awt.Color(51, 51, 51));
+        Usuarios1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Usuario.png"))); // NOI18N
+        Usuarios1.setText("    Usuarios");
+        Usuarios1.setEnabled(false);
+        Usuarios1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Usuarios1MouseClicked(evt);
+            }
+        });
+
+        Inicio.setForeground(new java.awt.Color(51, 51, 51));
+        Inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Inicio.png"))); // NOI18N
+        Inicio.setText("    Inicio");
+        Inicio.setEnabled(false);
+        Inicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                InicioMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelMenuLayout = new javax.swing.GroupLayout(jPanelMenu);
         jPanelMenu.setLayout(jPanelMenuLayout);
         jPanelMenuLayout.setHorizontalGroup(
             jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMenuLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanelMenuLayout.createSequentialGroup()
                 .addGroup(jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Clientes)
                     .addComponent(Productos)
-                    .addComponent(Usuarios)
+                    .addComponent(Proveedores)
                     .addComponent(NuevaFactura)
                     .addComponent(AdministrarFacturas)
                     .addComponent(Reportes)
                     .addComponent(Gráfica)
                     .addComponent(Configuración)
-                    .addComponent(Salir))
+                    .addComponent(Salir)
+                    .addComponent(Usuarios1)
+                    .addComponent(Inicio))
                 .addGap(0, 17, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMenuLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanelMenuLayout.setVerticalGroup(
             jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMenuLayout.createSequentialGroup()
                 .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
+                .addComponent(Inicio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Productos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Clientes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Usuarios)
+                .addComponent(Usuarios1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Proveedores)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(NuevaFactura)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -210,7 +230,7 @@ public class Sistema extends javax.swing.JFrame {
                 .addComponent(Configuración)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Salir)
-                .addGap(0, 160, Short.MAX_VALUE))
+                .addGap(0, 84, Short.MAX_VALUE))
         );
 
         jPanelVistas.setLayout(new java.awt.CardLayout());
@@ -296,11 +316,11 @@ public class Sistema extends javax.swing.JFrame {
         vista.show(jPanelVistas, "");
     }//GEN-LAST:event_ClientesMouseClicked
 
-    private void UsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UsuariosMouseClicked
+    private void ProveedoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ProveedoresMouseClicked
         usuarios.usuarios();
         jPanelVistas.add(usuarios);
         vista.show(jPanelVistas, "");
-    }//GEN-LAST:event_UsuariosMouseClicked
+    }//GEN-LAST:event_ProveedoresMouseClicked
 
     private void NuevaFacturaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NuevaFacturaMouseClicked
         NFactura.nuevaFactura();
@@ -329,6 +349,14 @@ public class Sistema extends javax.swing.JFrame {
     private void SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseClicked
         System.exit(0);
     }//GEN-LAST:event_SalirMouseClicked
+
+    private void Usuarios1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Usuarios1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Usuarios1MouseClicked
+
+    private void InicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InicioMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InicioMouseClicked
 
     /**
      * @param args the command line arguments
@@ -370,11 +398,13 @@ public class Sistema extends javax.swing.JFrame {
     private javax.swing.JLabel Clientes;
     private javax.swing.JLabel Configuración;
     private javax.swing.JLabel Gráfica;
+    private javax.swing.JLabel Inicio;
     private javax.swing.JLabel NuevaFactura;
     private javax.swing.JLabel Productos;
+    private javax.swing.JLabel Proveedores;
     private javax.swing.JLabel Reportes;
     private javax.swing.JLabel Salir;
-    private javax.swing.JLabel Usuarios;
+    private javax.swing.JLabel Usuarios1;
     private javax.swing.JButton btnMenu;
     private javax.swing.JPanel jPanelMenu;
     private javax.swing.JPanel jPanelPrincipal;

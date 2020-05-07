@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package proyecto_sistema_facturación;
 
 /**
  *
  * @author tmx
  */
-public class Reporte_Facturas extends javax.swing.JPanel {
+public class Grafica extends javax.swing.JPanel {
 
-    public void reportes(){
-        pReportes.setVisible(true);
+   public void graficas(){
+        pGraficas.setVisible(true);
     }
-    public Reporte_Facturas() {
+    public Grafica() {
         initComponents();
     }
 
@@ -27,64 +27,82 @@ public class Reporte_Facturas extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pReportes = new javax.swing.JPanel();
+        pGraficas = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(204, 204, 255));
-        jTextField1.setText("Reporte de Facturas");
+        jTextField1.setText("Gráfica");
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 204));
+        jButton1.setBackground(new java.awt.Color(0, 51, 255));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Reporte de facturas");
+        jButton1.setText("Generar gráfica");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("x");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout pReportesLayout = new javax.swing.GroupLayout(pReportes);
-        pReportes.setLayout(pReportesLayout);
-        pReportesLayout.setHorizontalGroup(
-            pReportesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pReportesLayout.createSequentialGroup()
+        javax.swing.GroupLayout pGraficasLayout = new javax.swing.GroupLayout(pGraficas);
+        pGraficas.setLayout(pGraficasLayout);
+        pGraficasLayout.setHorizontalGroup(
+            pGraficasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pGraficasLayout.createSequentialGroup()
                 .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2))
-            .addGroup(pReportesLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(pGraficasLayout.createSequentialGroup()
+                .addGap(133, 133, 133)
                 .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        pReportesLayout.setVerticalGroup(
-            pReportesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pReportesLayout.createSequentialGroup()
-                .addGroup(pReportesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        pGraficasLayout.setVerticalGroup(
+            pGraficasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pGraficasLayout.createSequentialGroup()
+                .addGroup(pGraficasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
-                .addGap(0, 248, Short.MAX_VALUE))
+                .addGap(0, 243, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pReportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pGraficas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pReportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pGraficas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JPanel pReportes;
+    private javax.swing.JPanel pGraficas;
     // End of variables declaration//GEN-END:variables
 }

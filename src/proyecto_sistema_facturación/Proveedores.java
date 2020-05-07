@@ -9,12 +9,12 @@ package proyecto_sistema_facturación;
  *
  * @author tmx
  */
-public class Login extends javax.swing.JPanel {
+public class Proveedores extends javax.swing.JPanel {
 
     /**
-     * Creates new form Login
+     * Creates new form Proveedores
      */
-    public Login() {
+    public Proveedores() {
         initComponents();
     }
 
